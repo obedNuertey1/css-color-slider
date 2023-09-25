@@ -9,6 +9,6 @@ describe('app.cy.tsx', () => {
     cy.get('.container').should('exist').within(()=>{
       cy.get('.marker').should('exist');
     });
-    cy.get('h1').should('exist').and('have.text', 'CSS Color Markers');
+    cy.get('h1').should('exist').and('have.text', 'Color Markers');
   })
 });
