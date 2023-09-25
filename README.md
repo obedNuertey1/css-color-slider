@@ -36,20 +36,22 @@ If you are developing a production application, we recommend updating the config
 
 [Visit-this-site](https://tailwindcss-color-slider.netlify.app/)
 
-## App Architecture
+## App Architecture/FlowChart
 
 ```mermaid
 graph TD
   subgraph "App.tsx file"
     A[App]
-    B[ColorSlides]
-    C[Colors Exclusive Per Slide]
-    D[Display Slides]
+    B[colorSlides] --> C
+    B --> D
+    C[colorsExclusivePerSlide]
+    D[displaySlides] --> A
   end
   subgraph "Color.tsx file"
     E[namespace Color]
-    F[interface Icolor]
-    G[class ColorSlides]
+    F[interface Icolor] --> C
+    G[class ColorSlides] --> B
+    F --> G
   end
   style A stroke:#DBA075,stroke-width:2px
   style B stroke:#DBA075,stroke-width:2px
@@ -58,9 +60,6 @@ graph TD
   style E stroke:#73A260,stroke-width:2px
   style F stroke:#73A260,stroke-width:2px
   style G stroke:#73A260,stroke-width:2px
-  A --> B
-  B --> C
-  B --> D
   E --> F
   E --> G
 ```
