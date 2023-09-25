@@ -31,6 +31,36 @@ If you are developing a production application, we recommend updating the config
 ```npm run dev``` to start the development server and
 ```npx cypress open``` to start writing tests
 
-# Visit the site below to see the webpage associated to this code
+# Info About this site
+## Visit the site below to see the webpage associated to this code
 
-[Visit-this-site](https://tailwind-colorSlide)
+[Visit-this-site](https://tailwindcss-color-slider.netlify.app/)
+
+## App Architecture
+
+```mermaid
+graph TD
+  subgraph "App.tsx file"
+    A[App]
+    B[ColorSlides]
+    C[Colors Exclusive Per Slide]
+    D[Display Slides]
+  end
+  subgraph "Color.tsx file"
+    E[namespace Color]
+    F[interface Icolor]
+    G[class ColorSlides]
+  end
+  style A stroke:#DBA075,stroke-width:2px
+  style B stroke:#DBA075,stroke-width:2px
+  style C stroke:#DBA075,stroke-width:2px
+  style D stroke:#DBA075,stroke-width:2px
+  style E stroke:#73A260,stroke-width:2px
+  style F stroke:#73A260,stroke-width:2px
+  style G stroke:#73A260,stroke-width:2px
+  A --> B
+  B --> C
+  B --> D
+  E --> F
+  E --> G
+```
