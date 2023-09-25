@@ -3,8 +3,8 @@ import './App.css'
 const App = ():JSX.Element => {
   return (
     <>
-      <h1 className="text-center font-bold font-impact">Color Markers</h1>
       <div className="container pt-2.5 pb-2.5 pl-0 pr-0">
+        <h1 className="text-center font-bold font-impact">Color Markers</h1>
         <div className="marker shadow-md shadow-red-800 hover:scale-98 hover:shadow-none ml-auto mr-auto mb-2.5 mt-2.5 w-52 h-6 bg-gradient-to-b from-red-800 via-red-600 to-red-800">
           <div className="cap w-14 h-6 inline-block"></div>
           <div className="sleeve bg-white opacity-50 w-32 h-6 inline-block border-l-black border-l-8 border-double"></div>
